@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verify Doc MZ</title>
+    <title>Verify Doc MZ - Scanner</title>
     <link rel="stylesheet" href="assets/styles.css">
-    <script src="js/main.js" defer></script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 <body>
-    <h1>Projeto Verify Doc MZ</h1>
-    <p>Sistema de Verificação de Autenticidade.</p>
-    <button onclick="validateSeal()">Validar Selo</button>
+    <header>
+        <h1>VERIFY DOC MZ</h1>
+        <p>Autenticidade Digital</p>
+    </header>
+
+    <main>
+        <div id="reader" style="width: 100%;"></div>
+        
+        <div class="controls">
+            <button id="btn-scan" class="primary-btn">Iniciar Validação</button>
+        </div>
+
+        <div id="result" class="result-card hidden">
+            <h3>Resultado da Verificação</h3>
+            <p id="status-text">Aguardando leitura...</p>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
